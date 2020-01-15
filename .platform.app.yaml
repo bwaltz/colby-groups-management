@@ -19,6 +19,10 @@ web:
       allow: true
       passthru: "/index.php"
 
+hooks:
+  deploy: |
+    php artisan migrate –force
+
 mounts:
   # Laravel uses a directory off the root called "storage" for logs and cache.
   "/storage/app/public": "shared:files/storage/app/public"

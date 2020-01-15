@@ -1,18 +1,22 @@
 <?php
 
 use Illuminate\Support\Str;
-$config = new Platformsh\ConfigReader\Config();
+use Platformsh\ConfigReader\Config;
 
-if ($config->isAvailable()) {
-    $pltrels = $config->relationships;
-    $database = $pltrels['database'][0];
-    putenv("DB_CONNECTION={$database['scheme']}");
-    putenv("DB_HOST={$database['host']}");
-    putenv("DB_PORT={$database['port']}");
-    putenv("DB_DATABASE={$database['path']}");
-    putenv("DB_USERNAME={$database['username']}");
-    putenv("DB_PASSWORD={$database['password']}");
+$config = new Config();
+if (!$config->isValidPlatform()) {
+    die("Not in a Platform.sh Environment.");
 }
+
+$pltrels = $config->relationships;
+$database = $pltrels['database'][0];
+putenv("DB_CONNECTION={$database['scheme']}");
+putenv("DB_HOST={$database['host']}");
+putenv("DB_PORT={$database['port']}");
+putenv("DB_DATABASE={$database['path']}");
+putenv("DB_USERNAME={$database['username']}");
+putenv("DB_PASSWORD={$database['password']}");
+
 
 return [
 
