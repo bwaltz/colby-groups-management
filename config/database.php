@@ -9,7 +9,7 @@ if (!$config->isValidPlatform()) {
 }
 if ($config->inRuntime()) {
     $pltrels = $config->credentials('database');
-    $database = $pltrels['database'][0];
+    $database = $pltrels['database'];
     putenv("DB_CONNECTION={$database['scheme']}");
     putenv("DB_HOST={$database['host']}");
     putenv("DB_PORT={$database['port']}");
