@@ -19,14 +19,6 @@ mounts:
     source: local
     source_path: uploads
 
-build:
-  |
-    set -e
-
-deploy:
-  |
-    set -e
-
 web:
   locations: 
     '/': 
