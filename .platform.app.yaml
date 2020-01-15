@@ -25,4 +25,4 @@ web:
   locations: 
     '/': 
       root: "\"web\""
-      passthru: "/index.php"
+      passthru: "/public/index.php"
