@@ -8,7 +8,7 @@ if (!$config->isValidPlatform()) {
     die("Not in a Platform.sh Environment.");
 }
 
-$pltrels = $config->relationships;
+$pltrels = $config->credentials('database');
 $database = $pltrels['database'][0];
 putenv("DB_CONNECTION={$database['scheme']}");
 putenv("DB_HOST={$database['host']}");
