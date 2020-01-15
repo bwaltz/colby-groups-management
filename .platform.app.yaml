@@ -19,6 +19,8 @@ mounts:
     source: local
     source_path: uploads
 
+disk: 2048
+
 web:
   locations: 
     '/': 
