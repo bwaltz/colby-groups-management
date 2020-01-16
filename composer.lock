@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "675547b0758552af92680a1199d0d002",
+    "content-hash": "f13492fe3eeb01233c18c25e19796a3b",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1312,6 +1312,50 @@
             ],
             "description": "Small helper to access Platform.sh environment variables",
             "time": "2019-11-05T19:56:33+00:00"
+        },
+        {
+            "name": "platformsh/laravel-bridge",
+            "version": "2.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/platformsh/laravel-bridge.git",
+                "reference": "1dc7a61ba61ded1ddece3e154169d01c365e3a7a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/platformsh/laravel-bridge/zipball/1dc7a61ba61ded1ddece3e154169d01c365e3a7a",
+                "reference": "1dc7a61ba61ded1ddece3e154169d01c365e3a7a",
+                "shasum": ""
+            },
+            "require": {
+                "platformsh/config-reader": "^2.1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "platformsh-laravel-env.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Larry Garfield",
+                    "email": "larry@platform.sh"
+                }
+            ],
+            "description": "Bridge library for running Symfony Flex on Platform.sh",
+            "time": "2020-01-13T16:09:02+00:00"
         },
         {
             "name": "psr/container",
