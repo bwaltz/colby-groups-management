@@ -22,7 +22,6 @@
         "sass-loader": "^7.1.0"
     },
     "dependencies": {
-        "md5": "^2.2.1",
         "react-modal": "^3.11.1",
         "react-nestable": "^1.2.2",
         "react-router-dom": "^5.1.2"
