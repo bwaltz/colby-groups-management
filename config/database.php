@@ -8,8 +8,8 @@ if (!$config->isValidPlatform()) {
     die("Not in a Platform.sh Environment.");
 }
 if ($config->inRuntime()) {
-    $pltrels = $config->credentials('database');
-    $database = $pltrels['database'];
+    $database = $config->credentials('database');
+    // $database = $pltrels['database'];
     putenv("DB_CONNECTION={$database['scheme']}");
     putenv("DB_HOST={$database['host']}");
     putenv("DB_PORT={$database['port']}");
